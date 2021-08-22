@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <style>
+            :root {
+            --main: #f17a7e;
+            --secondary: #f9faf4;
+                        }
+            body{
+                background: var(--main);
+            }
+            h1{
+                font-family: header;
+                color: var(--main);
+                margin-bottom: 10px;
+            }
+            ul, li{
+                list-style-type: none;
+            }
+            li{
+                margin-bottom: 5px;
+            }
+            p{
+                margin-bottom: 10px;
+            }
+            a{
+                color: var(--main);
+            }
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: body;
+                font-weight: bold;
+            }
+            @font-face {
+                font-family: header;
+                src: url('./header.ttf');
+            }
+            @font-face {
+                font-family: body;
+                src: url('./body.ttf');
+            }
+            @keyframes spin {
+                    from {
+                        transform:rotate(0deg);
+                    }
+                    to {
+                        transform:rotate(360deg);
+                    }
+                }
+            img{
+                width: 100px;
+                animation: spin 2s linear infinite;
+                margin: 20px;
+            }
+            .col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+            }
+            .container{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .center{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 25px;
+                border-radius: 5px;
+                background: var(--secondary);
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            }
+            @media only screen and (max-width: 900px){
+                .container{
+                    display: block !important;
+                }
+                .col{
+                    flex-direction: row;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left col">
+                <img src="./1.png" alt="">
+                <img src="./5.png" alt="">
+                <img src="./2.png" alt="">
+            </div>
+            <div class="center">
+                <h1>Hi, my name is Jax!</h1>
+                <p>I'm kind of an outdoor cat, so if you found me, i'm not necessarily lost!</p>
+                <p>My address is:<br/><a target="_blank" href="https://goo.gl/maps/569AqwbrijnTDaaD7">487 Crosby St<br />Altadena, CA<br />91001</a></p>
+                <p>My owners are Bella and Quinn, here's their info:</p>
+                <ul>
+                    <li>Quinn's #: <a href="tel:805-341-8911">(805) 341-8911</a></li>
+                    <li>Bella's #: <a href="tel:323-337-4397">(323) 337-4397</a></li>
+                    <li>Email: <a href="mailto:quinnjones0928@icloud.com">quinnjones0928@icloud.com</a></li>
+                </ul>
+            </div>
+            <div class="right col">
+                <img src="./4.png" alt="">
+                <img src="./3.png" alt="">
+                <img src="./6.png" alt="">
+            </div>
+        </div>
+    </body>
+</html>
